@@ -1,0 +1,151 @@
+*, *::after, *::before {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-image: url("bg.jpg");
+  /* background: linear-gradient(to right, hsl(200, 100%, 50%), hsl(175, 100%, 50%)); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.handClock {
+  width: 300px;
+  height: 300px;
+  background-color: rgba(255, 255, 255, .8);
+  border-radius: 50%;
+  border: 2px solid black;
+  position: relative;
+}
+
+.handClock .number {
+  --rotation: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transform: rotate(var(--rotation));
+  font-size: 1.5rem;
+}
+
+.handClock .number1 {
+  --rotation: 30deg;
+}
+
+.handClock .number2 {
+  --rotation: 60deg;
+}
+
+.handClock .number3 {
+  --rotation: 90deg;
+}
+
+.handClock .number4 {
+  --rotation: 120deg;
+}
+
+.handClock .number5 {
+  --rotation: 150deg;
+}
+
+.handClock .number6 {
+  --rotation: 180deg;
+}
+
+.handClock .number7 {
+  --rotation: 210deg;
+}
+
+.handClock .number8 {
+  --rotation: 240deg;
+}
+
+.handClock .number9 {
+  --rotation: 270deg;
+}
+
+.handClock .number10 {
+  --rotation: 300deg;
+}
+
+.handClock .number11 {
+  --rotation: 330deg;
+}
+
+.handClock .hand {
+  --rotation: 0;
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  border: 1px solid white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  transform-origin: bottom;
+  z-index: 10;
+  transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+}
+
+.handClock::after {
+  content: '';
+  position: absolute;
+  background-color: black;
+  z-index: 11;
+  width: 15px;
+  height: 15px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+.handClock .hand.second {
+  width: 3px;
+  height: 45%;
+  background-color: red;
+}
+
+.handClock .hand.minute {
+  width: 7px;
+  height: 40%;
+  background-color: black;
+}
+
+.handClock .hand.hour {
+  width: 10px;
+  height: 35%;
+  background-color: black;
+}
+
+/* Digital code */
+
+@import url('https://fonts.googleapis.com/css?family=Orbitron');
+
+#clock {
+ background-color: #ffffff;
+ border-radius: 25px;
+ opacity: .8;
+  font-family: 'Orbitron', sans-serif;
+  color: rgb(70, 43, 39);
+  font-size: 36px;
+  text-align:left;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+h1 {
+ font-family: 'Orbitron', sans-serif;
+  color: #ffffff;
+  font-size: 50px;
+  text-align:center;
+  padding-top: 0px;
+}
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+}
